@@ -194,7 +194,7 @@ export default function AdminAddProductPage(){
                         <option value={false}>No</option>
                        </select>
 
-                        <Link to="/admin/products" className="w-[49%] h-[50px] bg-red-500 text-white font-bold  rounded-2xl flex justify-center items-center hover:bg-red-700 border-[2px]  mt-[20px]">
+                        <Link to="/admin/products" className="w-[49%] h-[50px] bg-red-500 text-white font-bold  rounded-2xl flex justify-center items-center hover:bg-red-700 border-[2px] mt-[20px]">
                         Cancel
                     </Link>
                       <button onClick={addProduct}className="w-[49%] h-[50px] bg-blue-500 text-white font-bold  rounded-2xl flex justify-center items-center hover:bg-blue-700 border-[2px]  mt-[20px]">
@@ -202,27 +202,7 @@ export default function AdminAddProductPage(){
                       </button>
 
                  
-                </div>
-
-    
-               
-
-
-
-
-
-                
-
-
-
-
-
-
-
-
-             
-
-
+                </div>          
 
 
                </div>

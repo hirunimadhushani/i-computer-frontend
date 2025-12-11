@@ -1,0 +1,7 @@
+export default function Loaded(){
+    return( <div className="w-full h-screen fixed bg-black/45 flex justify-center items-center top-0 left-0">
+          <div className="w-[100px] h-[100px] border-2 border-secondary border-t-transparent rounded-full animate-spin"></div>
+          </div>
+    )
+  
+} 

@@ -4,10 +4,13 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Loaded from "../../components/loaded";
 import ProductDeleteButton from "../../components/productDeleteButton";
+import { useNavigate } from "react-router-dom";
+
 
 export default function AdminProductsPage() {
   const [products, setProducts] = useState([]);
 const[loaded,setLoaded]= useState(false);
+const navigate = useNavigate();
 
   useEffect(() => {
     if(!loaded){
@@ -87,7 +90,16 @@ const[loaded,setLoaded]= useState(false);
                     {items.isAvailable ? "Available" : "Out of Stock"}
                   </td>
 
-                  <td className="p-4">
+                  <td className="p-4 inline-flex gap-2 items-center">
+                    {/* <Link to="/admin/update-product"className="bg-gray-500 w-[80px] h-[40px] flex justify-center items-center text-white px-2 py-2 rounded-lg cursor-pointer hover:bg-blue-700 transition">
+                    Edit</Link> */}
+
+                    <button onClick={()=>{
+                      navigate('/admin/update-product',{state:items});
+                    }} className="bg-gray-500 w-[80px] h-[40px] flex justify-center items-center text-white px-2 py-2 rounded-lg cursor-pointer hover:bg-blue-700 transition">
+                    Edit</button>
+
+
 
                     <ProductDeleteButton productID ={items.productID} reload={()=>{setLoaded(false)}}/>
                    
